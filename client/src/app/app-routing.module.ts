@@ -44,11 +44,9 @@ const routes: Routes = [
 {path:'plate',component:PlateComponent},
 {path:'chefplates',component:ChefPlatesComponent},
 { path: 'cart', component: CartComponent },
+{path: 'plates', component:AllplatesComponent},
 { path: '', pathMatch: 'full', redirectTo: '/login' },
 { path:'**', redirectTo:'/login'},
-
-{path: 'cart', component: CartComponent },
-{path: 'plates', component:AllplatesComponent}
 ];
 
 @NgModule({
