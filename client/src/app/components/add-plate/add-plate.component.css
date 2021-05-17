@@ -43,10 +43,7 @@
   .sidebar-brand span{
     display: inline-block;
   }
-  .main-content{
-    margin-left: 345px;
-    font-size: 10px;
-  }  
+ 
   .btn {
   margin-bottom: 6.5%;
   margin-left: 0.5%;
@@ -97,7 +94,7 @@
   }
   .table{
     width: 100%;
-    margin-left: 19%;
+    /* margin-left: 19%; */
     margin-top: -3.5%;
   }
   td{
@@ -127,3 +124,5 @@
     text-decoration: 0.5px solid underline;
     border: 0.5px solid black;
   }
+
+  

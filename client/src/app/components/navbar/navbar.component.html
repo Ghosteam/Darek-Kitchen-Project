@@ -35,7 +35,10 @@
 			<a class="nav-link" routerLink="/dashboard">Dashboard</a>
 		</li>
 		<li class="nav-item" *ngIf="userRole==='chef'" >
-			<a class="nav-link" routerLink="/addplate">Management</a>
+			<a class="nav-link" routerLink="/addplate">Add</a>
+		</li>
+		<li class="nav-item" *ngIf="userRole==='chef'" >
+			<a class="nav-link" routerLink="/plate">Update</a>
 		</li>
 		<li class="nav-item">
 			<a class="nav-link" routerLink="/cart" *ngIf="userRole==='user'">

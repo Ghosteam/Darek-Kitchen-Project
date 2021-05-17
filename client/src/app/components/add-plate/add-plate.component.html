@@ -1,7 +1,7 @@
 <!--Sidebar-->
 
 <div class="dash">
-    <div class="sidebar">
+    <!-- <div class="sidebar">
         <div class="sidebar-brand">
             <h2><i class="las la-utensils"></i>Darek-Kitchen</h2>
         </div>
@@ -19,7 +19,8 @@
                 
             </ul>
         </div>
-    </div>
+    </div> -->
+    
     
     <!--Chef Add Plate Form-->
     
@@ -71,7 +72,7 @@
             <th><i class="fas fa-dollar-sign fa-lg"></i><strong>Price</strong> </th>
             <th><i class="fas fa-sort-numeric-up fa-lg"></i><strong>Quantity</strong> </th>
             <th><i class="fas fa-camera-retro fa-lg"></i><strong>Plate image </strong> </th>
-            <th><i id="deleteicon" class="fas fa-minus-circle fa-lg"></i><strong>Delete</strong> </th>
+            <!-- <th><i id="deleteicon" class="fas fa-minus-circle fa-lg"></i><strong>Delete</strong> </th> -->
         </tr>
     
         <tr *ngFor="let menu of menus">
@@ -81,7 +82,7 @@
             <td>{{menu.price}}</td>
             <td>{{menu.quantity}}</td>
             <td><img src="{{menu.image}}"></td>
-            <td><button id="deletebtn" class="btn"  (click)="confirmBox(menu)">delete</button></td>
+            <!-- <td><button id="deletebtn" class="btn"  (click)="confirmBox(menu)">delete</button></td> -->
         </tr>
         </table>
     </div>
