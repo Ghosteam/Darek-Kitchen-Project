@@ -93,4 +93,3 @@ export class CartComponent implements OnInit {
     localStorage.setItem('total',JSON.stringify(this.total))
   }
 }
-

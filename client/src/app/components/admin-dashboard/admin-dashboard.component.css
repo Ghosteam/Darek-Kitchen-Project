@@ -48,7 +48,7 @@ span{
   display: inline-block;
 }
 .main-content{
-  margin-left: 345px;
+  /* margin-left: 345px; */
   font-size: 10px;
 }
 img{
