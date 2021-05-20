@@ -148,7 +148,7 @@ text-align: left;
 
 }
 .btn {
-width: 1120px;
+width: 95%;
 background-color: #DEB28F ! important;
 border: none;
 outline: none;
@@ -282,4 +282,5 @@ font-weight: 550;
 }
 .chefslist{
   margin-left: 2.5%;
+  color: black;
 }
