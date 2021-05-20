@@ -33,7 +33,8 @@
     </header>
   <div class="row">
       
-      <table class="table">
+      <table mdbTable [striped]=true class="table">
+        <thead>
           <tr>
           <th><i class="fas fa-utensils fa-lg"></i><strong>Plate Name</strong> </th>
           <th><i class="fas fa-mortar-pestle fa-lg"></i><strong>Plate Description</strong> </th>
@@ -44,7 +45,8 @@
           <th><i class="fas fa-edit fa-lg"></i><strong>Update</strong> </th>
           <th><i id="deleteicon" class="fas fa-minus-circle fa-lg"></i><strong>Delete</strong> </th>
       </tr>
-  
+    </thead>
+    <tbody>
       <tr *ngFor="let menu of menus | filter:filterTerm">
           <td>{{menu.title}}</td>
           <td>{{menu.description}}</td>
@@ -54,7 +56,7 @@
           <td><img src="{{menu.image}}"></td>
           <td><button class="btn black btnblack" data-toggle="modal" data-target="#myModal" (click)="getvalues(menu)">Update</button></td>
           <td><button id="deletebtn" class="btn"  (click)="confirmBox(menu)">delete</button></td>
-  
+        
           <!-- Modal -->
         <div class="modal fade" id="myModal" role="dialog">
           <div class="modal-dialog">
@@ -95,6 +97,7 @@
           </div>
         </div>
       </tr>
+    </tbody>
       </table>
   </div>
 
