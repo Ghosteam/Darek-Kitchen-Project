@@ -15,7 +15,7 @@
 		<li class="nav-item" *ngIf="userRole==='admin' || userRole==='user'  || userRole==='chef'">
 			<a class="nav-link" routerLink="/welcome" >Home</a>
 		</li>
-		<li class="nav-item">
+		<li class="nav-item" *ngIf="userRole===undefined ">
 			<a class="nav-link" routerLink="/about">About</a>
 		</li>
 		<li class="nav-item">
@@ -25,7 +25,7 @@
 			<a class="nav-link" routerLink="/plates" *ngIf="userRole==='admin' || userRole==='chef' ">Plates</a>
 		</li>
 
-		<li class="nav-item">
+		<li class="nav-item" *ngIf="userRole===undefined || userRole==='user'  || userRole==='chef'">
 			<a class="nav-link" routerLink="/contact">Contact</a>
 		</li>
 		  <li class="nav-item" *ngIf="userRole===undefined" >
@@ -34,8 +34,20 @@
 		<li class="nav-item" *ngIf="userRole==='admin'" >
 			<a class="nav-link" routerLink="/dashboard">Dashboard</a>
 		</li>
+		<li class="nav-item" *ngIf="userRole==='admin'" >
+			<a class="nav-link" routerLink="/createchef">Chefs</a>
+		</li>
+		<li class="nav-item" *ngIf="userRole==='admin'" >
+			<a class="nav-link" routerLink="/getusers">Users</a>
+		</li>
+		<li class="nav-item" *ngIf="userRole==='admin'" >
+			<a class="nav-link" routerLink="/getbrands">Manage Plates</a>
+		</li>
 		<li class="nav-item" *ngIf="userRole==='chef'" >
-			<a class="nav-link" routerLink="/addplate">Management</a>
+			<a class="nav-link" routerLink="/addplate">Add</a>
+		</li>
+		<li class="nav-item" *ngIf="userRole==='chef'" >
+			<a class="nav-link" routerLink="/plate">Updates</a>
 		</li>
 		<li class="nav-item">
 			<a class="nav-link" routerLink="/cart" *ngIf="userRole==='user'">

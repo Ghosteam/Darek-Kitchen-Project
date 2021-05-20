@@ -26,29 +26,27 @@ import { AllplatesComponent } from './components/allplates/allplates.component';
 
 const routes: Routes = [
 {path:'',component:HomePageComponent},
-{path:'brands', component: BrandsComponent },
+{path:'brands', component: BrandsComponent, canActivate: [GuardGuard] },
 {path:'login',component:UserLoginComponent},
 {path:'about',component:AboutComponent},
 {path:'contact',component:ContactComponent},
 {path:'userSignup',component:UserSignupComponent},
-{ path: 'addBrand', component: AddBrandComponent },
+{ path: 'addBrand', component: AddBrandComponent, canActivate: [GuardGuard]},
 { path: 'dashboard', component: AdminDashboardComponent, canActivate: [GuardGuard] },
-{path: 'menu', component: MenuComponent},
-{path:'getusers', component : GetUserComponent},
-{path:'getbrands',component: BrandsAdminComponent},
-{path:'createchef',component: CreateChefComponent},
-{path:'welcome',component:LoggedHomeComponent},
-{path:'manage',component: ManagementComponent},
-{path:'order',component : OrdersComponent},
-{path:'addplate',component:AddPlateComponent},
-{path:'plate',component:PlateComponent},
-{path:'chefplates',component:ChefPlatesComponent},
-{ path: 'cart', component: CartComponent },
+{path: 'menu', component: MenuComponent, canActivate: [GuardGuard]},
+{path:'getusers', component : GetUserComponent, canActivate: [GuardGuard]},
+{path:'getbrands',component: BrandsAdminComponent, canActivate: [GuardGuard]},
+{path:'createchef',component: CreateChefComponent, canActivate: [GuardGuard]},
+{path:'welcome',component:LoggedHomeComponent, canActivate: [GuardGuard]},
+{path:'manage',component: ManagementComponent, canActivate: [GuardGuard]},
+{path:'order',component : OrdersComponent, canActivate: [GuardGuard]},
+{path:'addplate',component:AddPlateComponent, canActivate: [GuardGuard]},
+{path:'plate',component:PlateComponent, canActivate: [GuardGuard]},
+{path:'chefplates',component:ChefPlatesComponent, canActivate: [GuardGuard]},
+{ path: 'cart', component: CartComponent, canActivate: [GuardGuard]},
+{path: 'plates', component:AllplatesComponent, canActivate: [GuardGuard]},
 { path: '', pathMatch: 'full', redirectTo: '/login' },
 { path:'**', redirectTo:'/login'},
-
-{path: 'cart', component: CartComponent },
-{path: 'plates', component:AllplatesComponent}
 ];
 
 @NgModule({
