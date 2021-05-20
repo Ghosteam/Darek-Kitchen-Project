@@ -1,6 +1,6 @@
 <div class="dash">
 
-  <div class="sidebar">
+  <!-- <div class="sidebar">
     <div class="sidebar-brand">
         <h2><i class="las la-utensils"></i>Darek-Kitchen</h2>
     </div>
@@ -26,7 +26,7 @@
 
         </ul>
       </div>
-    </div>
+    </div> -->
 
 
     <div class="main-content">
@@ -45,7 +45,8 @@
         <div class="card-single" >
           <div class="row">
     
-            <table class="table">
+            <table mdbTable [striped]="true" class="table">
+              <thead>
                 <tr>
                   <th><i class="fas fa-utensils fa-lg"></i><strong>Plate Name</strong> </th>
                   <th><i class="fas fa-map-marked-alt fa-lg"></i><strong>Location</strong> </th>
@@ -53,21 +54,19 @@
                   <th><i class="fas fa-camera-retro fa-lg"></i><strong>Plate image </strong> </th>
                   <th><i id="deleteicon" class="fas fa-minus-circle fa-lg"></i><strong>Delete</strong> </th>
                 </tr>
-        
+              </thead>
+              <tbody>
             <tr *ngFor="let menu of menus | filter:filterTerm">
                 <td>{{menu.title}}</td>
                 <td>{{menu.location}}</td>
                 <td>{{menu.price}}</td>
                 <td><img src={{menu.image}}></td>
                 <td><button class="btn F7F709 btnyellow" (click)="confirmBox(menu)">Delete</button></td>
-    </tr>
-  </table>
-            
-        </div>
-        </div>
-    <div>
-        <span class="las la-google-wallet"></span>
-    </div>
+          </tr>
+        </tbody>
+    </table>
     
+        </div>
+      </div>
     </div>
-    </div>
+</div>
