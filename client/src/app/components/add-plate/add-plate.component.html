@@ -24,10 +24,9 @@
     
     <!--Chef Add Plate Form-->
     
-    <form  [formGroup]="menuForm" >
-    
-        
-        <h2 class="title"><i class="fas fa-bars"></i> Create Plate</h2>
+    <h2 class="title"><i class="fas fa-bars"></i> Create Plate</h2>
+
+        <form  [formGroup]="menuForm" >
     
         <div class="input-field">
             <label><b>Photo :</b></label>
@@ -47,24 +46,27 @@
         <div class="input-field">
             <label><b>Location :</b></label>
             <input id="inplocation" type="text" maxlength="10" placeholder="location"  formControlName="location"/>
-          </div>
-          
+        </div>
+        
     
         <div class="input-field">
             <label><b>Price :</b></label>
-          <input id="inpprice" type="text" placeholder="Price Menu" maxlength="4" formControlName="price"/>
+        <input id="inpprice" type="text" placeholder="Price Menu" maxlength="4" formControlName="price"/>
         </div>
         <div class="input-field">
             <label><b>Quantity :</b></label>
-          <input id="inpquantity" type="text" placeholder="Price Menu" maxlength="3" formControlName="quantity"/>
+        <input id="inpquantity" type="text" placeholder="Price Menu" maxlength="3" formControlName="quantity"/>
         </div>
     <!--Add Plate Button-->
         <button id="addbtn" class="btn" (click)="addMenu()"><b>ADD</b></button>
+    </form>
     
-      </form>
+    <h2 class="plateslist"><i class="fas fa-bars"></i> Plates List</h2>
+
     <div class="row">
         
-        <table class="table">
+        <table mdbTable [striped]=true class="table ">
+            <thead>
             <tr>
             <th><i class="fas fa-utensils fa-lg"></i><strong>Plate Name</strong> </th>
             <th><i class="fas fa-mortar-pestle fa-lg"></i><strong>Plate Description</strong> </th>
@@ -74,7 +76,8 @@
             <th><i class="fas fa-camera-retro fa-lg"></i><strong>Plate image </strong> </th>
             <!-- <th><i id="deleteicon" class="fas fa-minus-circle fa-lg"></i><strong>Delete</strong> </th> -->
         </tr>
-    
+    </thead>
+    <tbody>
         <tr *ngFor="let menu of menus">
             <td>{{menu.title}}</td>
             <td>{{menu.description}}</td>
@@ -84,6 +87,7 @@
             <td><img src="{{menu.image}}"></td>
             <!-- <td><button id="deletebtn" class="btn"  (click)="confirmBox(menu)">delete</button></td> -->
         </tr>
+    </tbody>
         </table>
     </div>
     

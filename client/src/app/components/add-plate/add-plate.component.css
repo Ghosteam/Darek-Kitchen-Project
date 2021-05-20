@@ -52,6 +52,12 @@
     padding:10px;
     margin-right: 3%;
   }
+  .plateslist{
+    margin-bottom: 4%;
+    margin-top:-5%;
+    margin-left: 0.75%;
+    text-decoration:double
+  }
   
   label{
   font-size: 16px;

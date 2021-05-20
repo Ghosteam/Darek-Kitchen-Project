@@ -15,7 +15,7 @@
 		<li class="nav-item" *ngIf="userRole==='admin' || userRole==='user'  || userRole==='chef'">
 			<a class="nav-link" routerLink="/welcome" >Home</a>
 		</li>
-		<li class="nav-item">
+		<li class="nav-item" *ngIf="userRole===undefined ">
 			<a class="nav-link" routerLink="/about">About</a>
 		</li>
 		<li class="nav-item">
