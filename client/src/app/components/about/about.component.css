@@ -48,3 +48,8 @@ p{
   max-width: 60%;
   font-family: Cervino Regular, Condensed;
 }
+.position{
+  position: absolute;
+  bottom: 50vh;
+  left : 30vh;
+}

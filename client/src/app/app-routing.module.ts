@@ -31,8 +31,8 @@ const routes: Routes = [
 {path:'about',component:AboutComponent},
 {path:'contact',component:ContactComponent},
 {path:'userSignup',component:UserSignupComponent},
-{ path: 'addBrand', component: AddBrandComponent, canActivate: [GuardGuard]},
-{ path: 'dashboard', component: AdminDashboardComponent, canActivate: [GuardGuard] },
+{path: 'addBrand', component: AddBrandComponent, canActivate: [GuardGuard]},
+{path: 'dashboard', component: AdminDashboardComponent, canActivate: [GuardGuard] },
 {path: 'menu', component: MenuComponent, canActivate: [GuardGuard]},
 {path:'getusers', component : GetUserComponent, canActivate: [GuardGuard]},
 {path:'getbrands',component: BrandsAdminComponent, canActivate: [GuardGuard]},
@@ -43,10 +43,10 @@ const routes: Routes = [
 {path:'addplate',component:AddPlateComponent, canActivate: [GuardGuard]},
 {path:'plate',component:PlateComponent, canActivate: [GuardGuard]},
 {path:'chefplates',component:ChefPlatesComponent, canActivate: [GuardGuard]},
-{ path: 'cart', component: CartComponent, canActivate: [GuardGuard]},
+{path: 'cart', component: CartComponent, canActivate: [GuardGuard]},
 {path: 'plates', component:AllplatesComponent, canActivate: [GuardGuard]},
-{ path: '', pathMatch: 'full', redirectTo: '/login' },
-{ path:'**', redirectTo:'/login'},
+{path: '', pathMatch: 'full', redirectTo: '/login' },
+{path:'**', redirectTo:'/login'},
 ];
 
 @NgModule({
