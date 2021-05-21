@@ -40,7 +40,7 @@ form{
 {
 	font-size: 18px;
 	font-weight: 500;
-	color: black
+	color: #DEB28F
 
 	
 }
@@ -80,7 +80,7 @@ form{
 	display: flex;
 	margin-left: 20px;
 	font-size: 16px;
-	color: black;
+	color: #DEB28F;
 	flex-direction: column;
 	font-weight: 500;
 	
@@ -88,7 +88,7 @@ form{
 .containers .info .box .text h3
 {
 	font-weight: 500;
-	color: #deb38f;
+	color: white;
 	
 }
 
@@ -124,7 +124,6 @@ form{
 	font-size: 16px;
 	margin: 10px 0;
 	border: none;
-	/* border-bottom: 2px solid #333; */
 	outline: none;
 	resize: none;
 	border-radius: 5px;

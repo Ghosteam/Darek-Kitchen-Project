@@ -1,4 +1,3 @@
-
 @media (min-width: 768px) and (max-width: 1023px) {
   .container {
     margin-top: 20%;
@@ -48,4 +47,9 @@ p{
   color: #DEB28F;
   max-width: 60%;
   font-family: Cervino Regular, Condensed;
+}
+.position{
+  position: absolute;
+  bottom: 50vh;
+  left : 30vh;
 }
