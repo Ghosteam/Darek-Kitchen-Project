@@ -64,5 +64,46 @@ getMenuByChef(id:any){
 getvalues(data: any) {
   this.menuForm.setValue(data)
 }
+confirmBox(menu : any){
+  Swal.fire({
+    title: 'Are you sure want to remove?',
+    text: 'You will not be able to recover this file!',
+    width:'350px',
+    iconColor: '#DEB28F',
+    icon: 'warning',
+    showCancelButton: true,
+    confirmButtonText: 'Yes, delete it!',
+    confirmButtonColor:'#DEB28F',
+    background: "black",
+    backdrop: "#deb38f93",
+    cancelButtonText: 'No, keep it'
+  }).then((result) => {      
+    if (result.value) {
+      this.menuService.deletemenu(menu.ID_menu)
+      .subscribe() 
+      Swal.fire({
+        title:'Deleted!',
+        text:'Your Plate has been deleted.',
+        icon:'success',
+        iconColor: '#DEB28F',
+        background: "black",
+        confirmButtonColor:'#DEB28F',
+        width:'350px',
+      })
+      // this.getmenu()
+      this.getMenuByChef(this.id)
+    } else if (result.dismiss === Swal.DismissReason.cancel) {
+      Swal.fire({
+        title:'Cancelled',
+        text:'Your Plate is safe :)',
+        icon:'error',
+        width:'350px',
+        iconColor: '#DEB28F',
+        background: "black",
+        confirmButtonColor:'#DEB28F',
+      })
+    }
+  })
+}
 
 }

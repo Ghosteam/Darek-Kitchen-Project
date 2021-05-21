@@ -68,7 +68,7 @@ export class BrandsAdminComponent implements OnInit {
   deleteMenu(menu: any) {
     this.menuService.deletemenu(menu.ID_menu)
     .subscribe() 
-     location.reload()
+    location.reload()
   }
   confirmBox(menu : any){
     Swal.fire({
@@ -96,7 +96,7 @@ export class BrandsAdminComponent implements OnInit {
           confirmButtonColor:'#DEB28F',
           width:'350px',
         })
-       this.getmenu()
+        this.getmenu()
       } else if (result.dismiss === Swal.DismissReason.cancel) {
         Swal.fire({
           title:'Cancelled',

@@ -1,5 +1,5 @@
 <div class="dash">
-  <div class="sidebar">
+  <!-- <div class="sidebar">
       <div class="sidebar-brand">
           <h2><i class="las la-utensils"></i>Darek-Kitchen</h2>
       </div>
@@ -17,7 +17,7 @@
               
           </ul>
       </div>
-  </div>
+  </div> -->
   
   <div class="main-content">
     <header>
@@ -25,7 +25,7 @@
       <div class="search-wrapper">
         <form>
           <input class="search" type="text" placeholder="Type here to search..." [(ngModel)]="filterTerm" [ngModelOptions]="{standalone: true}" />
-          <button class="close-icon" type="reset"></button>
+          <!-- <button class="close-icon" type="reset"></button> -->
         </form>
       </div>
   
@@ -33,7 +33,8 @@
     </header>
   <div class="row">
       
-      <table class="table">
+      <table mdbTable [striped]=true class="table">
+        <thead>
           <tr>
           <th><i class="fas fa-utensils fa-lg"></i><strong>Plate Name</strong> </th>
           <th><i class="fas fa-mortar-pestle fa-lg"></i><strong>Plate Description</strong> </th>
@@ -42,8 +43,10 @@
           <th><i class="fas fa-sort-numeric-up fa-lg"></i><strong>Quantity</strong> </th>
           <th><i class="fas fa-camera-retro fa-lg"></i><strong>Plate image </strong></th>
           <th><i class="fas fa-edit fa-lg"></i><strong>Update</strong> </th>
+          <th><i id="deleteicon" class="fas fa-minus-circle fa-lg"></i><strong>Delete</strong> </th>
       </tr>
-  
+    </thead>
+    <tbody>
       <tr *ngFor="let menu of menus | filter:filterTerm">
           <td>{{menu.title}}</td>
           <td>{{menu.description}}</td>
@@ -52,8 +55,8 @@
           <td>{{menu.quantity}}</td>
           <td><img src="{{menu.image}}"></td>
           <td><button class="btn black btnblack" data-toggle="modal" data-target="#myModal" (click)="getvalues(menu)">Update</button></td>
-          
-  
+          <td><button id="deletebtn" class="btn"  (click)="confirmBox(menu)">delete</button></td>
+        
           <!-- Modal -->
         <div class="modal fade" id="myModal" role="dialog">
           <div class="modal-dialog">
@@ -94,6 +97,7 @@
           </div>
         </div>
       </tr>
+    </tbody>
       </table>
   </div>
 
